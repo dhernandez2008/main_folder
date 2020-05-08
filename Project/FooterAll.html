@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+.header {
+  background-color: #f1f1f1;/*Cambié el color */
+  padding: 20px; /*Tambien el tamaño del rectangulo*/
+  text-align: center; /*Estaba center, mandé el texto a la izq*/
+}
+
+.topnav{
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover{
+  background-color: #ddd;
+  color: yellow;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.column.side{
+  width: 25%;
+}
+
+.column.middle {
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px){
+  .column.side, .column.middle{
+    width: 100%;
+  }
+}
+
+.footer {
+  backgroud-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>YSW</h1>
+  <p>Información completa sobre las ceremonias de Yage en la ciudad de Bogotá y todo Colombia.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Ceremonias</a>
+  <a href="#">Taita</a>
+  <a href="#">Viajes al Putumayo</a>
+</div>
+
+<div class="row">
+
+  <div class="column side">
+    <h2>Taita Polo</h2>
+    <p>Abuelo de la comunidad Inga de putumayo, amigo y gran maestro,
+      Abuelo de la comunidad Inga de putumayo, amigo y gran maestro,
+      Abuelo de la comunidad Inga de putumayo, amigo y gran maestro,
+      Abuelo de la comunidad Inga de putumayo, amigo y gran maestro,
+      Abuelo de la comunidad Inga de putumayo, amigo y gran maestro,
+      Abuelo de la comunidad Inga de putumayo, amigo y gran maestro,
+      Abuelo de la comunidad Inga de putumayo, amigo y gran maestro</p>
+
+  </div>
+
+  <div class="column middle">
+    <h2>Yage</h2>
+    <p>Medicina Milenaria para sanar cuerpo, alma y espiritu,
+      Medicina Milenaria para sanar cuerpo, alma y espiritu,
+      Medicina Milenaria para sanar cuerpo, alma y espiritu,
+      Medicina Milenaria para sanar cuerpo, alma y espiritu,
+      Medicina Milenaria para sanar cuerpo, alma y espiritu,
+      Medicina Milenaria para sanar cuerpo, alma y espiritu,
+      Medicina Milenaria para sanar cuerpo, alma y espiritu,
+      Medicina Milenaria para sanar cuerpo, alma y espiritu </p>
+  </div>
+
+  <div class="column side">
+    <h2>Taita Jhon</h2>
+    <p>Hijo del abuelo Polo, gran sanador, parcero y musiquero,
+      Hijo del abuelo Polo, gran sanador, parcero y musiquero,
+      Hijo del abuelo Polo, gran sanador, parcero y musiquero,
+      Hijo del abuelo Polo, gran sanador, parcero y musiquero,
+      Hijo del abuelo Polo, gran sanador, parcero y musiquero,
+      Hijo del abuelo Polo, gran sanador, parcero y musiquero </p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Muchas Gracias!!!</p>
+</div>
+</body>
+</html>
