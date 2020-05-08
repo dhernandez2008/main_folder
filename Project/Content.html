@@ -10,21 +10,26 @@
 }
 
 body {
-  margin: 30px;
+  margin: 0px;
 }
 
 .header {
-  background-color: #ff3f33;/*Cambié el color */
+  background-color: #ddd;/*Cambié el color */
   padding: 20px; /*Tambien el tamaño del rectangulo*/
   text-align: center; /*Estaba center, mandé el texto a la izq*/
 }
 
-.topnav {
-    float: right;
+.topnav{
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+    float: center;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 15px 30px;
+    padding: 20px 16px;
     text-decoration: none;
 }
 
@@ -33,19 +38,56 @@ body {
   color: yellow;
 }
 
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px){
+  .column{
+    width: 100%;
+  }
+}
+
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>Header</h1>
+  <h1>YSW</h1>
+  <p>Información completa sobre las ceremonias de Yage en la ciudad de Bogotá.</p>
 </div>
 
 <div class="topnav">
-  <a href="#">Link1</a>
-  <a href="#">Link2</a>
-  <a href="#">Link3</a>
+  <a href="#">Ceremonias</a>
+  <a href="#">Taita</a>
+  <a href="#">Viajes al Putumayo</a>
 </div>
 
+<div class="row">
+
+  <div class="column">
+    <h2>Column1</h2>
+    <p>1234567891011121314151617181920</p>
+  </div>
+
+  <div class="column">
+    <h2>Column2</h2>
+    <p>1234567891011121314151617181920</p>
+  </div>
+
+  <div class="column">
+    <h2>Column3</h2>
+    <p>1234567891011121314151617181920</p>
+  </div>
+
+</div>
 </body>
 </html>
